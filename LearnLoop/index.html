@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <title>LearnLoop – Learn. Grow. Achieve.</title>
+  <meta name="description" content="LearnLoop is a friendly place to explore courses, take quizzes and track your learning progress.">
+  <!-- Google Fonts: Fraunces (headings) and Plus Jakarta Sans (body). Fallback fonts are set in the CSS. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== NAVIGATION BAR (frosted glass, stays at top) ===== -->
+  <header class="site-header glass">
+    <nav class="nav container" aria-label="Main">
+      <a class="logo" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11" fill="none" stroke="url(#lg)" stroke-width="5" stroke-linecap="round" stroke-dasharray="52 17"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2458A6"/><stop offset="1" stop-color="#6F9DCA"/></linearGradient></defs></svg>
+        LearnLoop
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="dashboard.html">My Learning</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="auth-slot" id="auth-slot"></div>
+        <button class="icon-btn" id="theme-toggle" aria-label="Switch to dark mode">🌙</button>
+        <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="tagline">Learn. Grow. Achieve.</p>
+          <h1>Every lesson closes one loop and opens the next.</h1>
+          <p class="lead">Pick a course, work through short lessons, test yourself with a quiz, and track your learning progress. Free to explore, and saved right in your browser.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="courses.html">Explore courses</a>
+            <a class="btn btn-ghost" href="#how">See how it works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED COURSES: one big card + two smaller (staggered) ===== -->
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="section-head">
+          <h2>Start with a favourite</h2>
+          <a class="text-link" href="courses.html">Browse all courses</a>
+        </div>
+        <div class="featured-grid">
+          <article class="card course course-big" style="--tone: linear-gradient(135deg,#2458A6,#6F9DCA)">
+            <div class="course-art"><img src="assets/images/course-web.jpg" alt="" width="600" height="360" loading="lazy"></div>
+            <div class="course-body">
+              <div class="meta"><span class="tag">Web Development</span><span class="badge">Beginner</span></div>
+              <h3>Web Basics: Build Your First Page</h3>
+              <p>Learn HTML, CSS and a little JavaScript by building a real page, one small lesson at a time.</p>
+              <div class="course-foot">
+                <a class="text-link" href="course-details.html?id=web-basics">View details</a>
+                <button class="btn btn-primary btn-sm enroll-btn" data-course="web-basics" data-title="Web Basics">Enroll</button>
+              </div>
+            </div>
+          </article>
+          <article class="card course course-sm" style="--tone: linear-gradient(135deg,#6F9DCA,#C5DDF2)">
+            <div class="course-art"><img src="assets/images/course-design1.jpg" alt="Design Thinking Essentials cover" width="600" height="360" loading="lazy"></div>
+            <div class="course-body">
+              <div class="meta"><span class="tag">Design</span><span class="badge">Beginner</span></div>
+              <h3>Design Thinking Essentials</h3>
+              <p>Turn ideas into simple, useful designs.</p>
+              <div class="course-foot">
+                <a class="text-link" href="course-details.html?id=design-thinking">Details</a>
+                <button class="btn btn-primary btn-sm enroll-btn" data-course="design-thinking" data-title="Design Thinking Essentials">Enroll</button>
+              </div>
+            </div>
+          </article>
+          <article class="card course course-sm offset" style="--tone: linear-gradient(135deg,#183B78,#2458A6)">
+            <div class="course-art"><img src="assets/images/course-data.jpg" alt="" width="600" height="360" loading="lazy"></div>
+            <div class="course-body">
+              <div class="meta"><span class="tag">Data</span><span class="badge">Intermediate</span></div>
+              <h3>Data Skills with Spreadsheets</h3>
+              <p>Clean, sort and chart data with confidence.</p>
+              <div class="course-foot">
+                <a class="text-link" href="course-details.html?id=spreadsheet-data">Details</a>
+                <button class="btn btn-primary btn-sm enroll-btn" data-course="spreadsheet-data" data-title="Data Skills with Spreadsheets">Enroll</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CATEGORIES: colourful pill tiles ===== -->
+    <section class="section section-tint">
+      <div class="container">
+        <h2>Pick a path</h2>
+        <ul class="categories">
+          <li><a class="cat" href="courses.html?category=web" style="--tone:linear-gradient(135deg,#2458A6,#6F9DCA)"><span class="cat-icon"><img src="assets/icons/web.svg" alt="" width="22" height="22"></span>Web Development</a></li>
+          <li><a class="cat" href="courses.html?category=design" style="--tone:linear-gradient(135deg,#6F9DCA,#C5DDF2)"><span class="cat-icon"><img src="assets/icons/design.svg" alt="" width="22" height="22"></span>Design</a></li>
+          <li><a class="cat" href="courses.html?category=data" style="--tone:linear-gradient(135deg,#183B78,#2458A6)"><span class="cat-icon"><img src="assets/icons/data.svg" alt="" width="22" height="22"></span>Data</a></li>
+          <li><a class="cat" href="courses.html?category=business" style="--tone:linear-gradient(135deg,#8d6be0,#b79af7)"><span class="cat-icon"><img src="assets/icons/business.svg" alt="" width="22" height="22"></span>Business</a></li>
+          <li><a class="cat" href="courses.html?category=growth" style="--tone:linear-gradient(135deg,#183B78,#6F9DCA)"><span class="cat-icon"><img src="assets/icons/growth.svg" alt="" width="22" height="22"></span>Personal Growth</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== WHY LEARNLOOP: alternating text / visual ===== -->
+    <section class="section">
+      <div class="container why">
+        <div class="why-row">
+          <div>
+            <h2>Short lessons that fit your day</h2>
+            <p>Each lesson takes about ten minutes. Finish one on a coffee break, pick up the next tomorrow. Small steps add up faster than you expect.</p>
+          </div>
+          <div class="why-visual card"><div class="bars" aria-hidden="true"><i style="--h:35%"></i><i style="--h:60%"></i><i style="--h:45%"></i><i style="--h:80%"></i><i style="--h:65%"></i><i style="--h:95%"></i></div><small>Your week, lesson by lesson</small></div>
+        </div>
+        <div class="why-row reverse">
+          <div>
+            <h2>Quizzes that show what stuck</h2>
+            <p>After each course, a quick multiple-choice quiz tells you which answers were right and why, so you know exactly what to review.</p>
+          </div>
+          <div class="why-visual card"><div class="mini-ring" aria-hidden="true">9/10</div><small>Instant score and feedback</small></div>
+        </div>
+        <div class="why-row">
+          <div>
+            <h2>Progress that remembers you</h2>
+            <p>Your enrolled courses and completed lessons are saved in this browser. Your account and progress stay on your own device.</p>
+          </div>
+          <div class="why-visual card"><div class="check-list" aria-hidden="true"><span>✓ Lesson 1</span><span>✓ Lesson 2</span><span class="todo">○ Lesson 3</span></div><small>Pick up where you stopped</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS: a real sequence, so numbered steps make sense ===== -->
+    <section class="section section-tint" id="how">
+      <div class="container">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li><span class="step-num">1</span><h3>Choose a course</h3><p>Search or filter by category and level.</p></li>
+          <li><span class="step-num">2</span><h3>Learn lesson by lesson</h3><p>Mark lessons complete and watch your ring fill.</p></li>
+          <li><span class="step-num">3</span><h3>Test and celebrate</h3><p>Take the quiz, review answers, start the next loop.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS: horizontal scroll ===== -->
+    <section class="section">
+      <div class="container"><h2>What learners say</h2></div>
+      <div class="quotes" tabindex="0" aria-label="Learner testimonials, scroll sideways">
+        <figure class="card quote"><blockquote>“I finally finished a course. The small lessons and the progress ring kept me coming back.”</blockquote><figcaption><img class="avatar-img" src="assets/images/avatar-1.svg" alt="" width="36" height="36">Ananya R., Web Basics</figcaption></figure>
+        <figure class="card quote"><blockquote>“The quiz explained every wrong answer. That was the part that made things stick.”</blockquote><figcaption><img class="avatar-img" src="assets/images/avatar-2.svg" alt="" width="36" height="36">Rahul M., Spreadsheet Data</figcaption></figure>
+        <figure class="card quote"><blockquote>“Calm, clear and no pressure. I learn a little each evening.”</blockquote><figcaption><img class="avatar-img" src="assets/images/avatar-3.svg" alt="" width="36" height="36">Meera S., Design Thinking</figcaption></figure>
+        <figure class="card quote"><blockquote>“Seeing my streak grow is oddly motivating. Seven days and counting.”</blockquote><figcaption><img class="avatar-img" src="assets/images/avatar-4.svg" alt="" width="36" height="36">Karthik V., Personal Growth</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ===== CALL TO ACTION ===== -->
+    <section class="section">
+      <div class="container cta-band">
+        <h2>Ready to close your first loop?</h2>
+        <a class="btn btn-light" href="courses.html">Explore courses</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="logo" href="index.html">LearnLoop</a><p>Learn. Grow. Achieve.</p></div>
+      <nav aria-label="Footer"><a href="courses.html">Courses</a><a href="about.html">About</a><a href="dashboard.html">My Learning</a><a href="contact.html">Contact</a></nav>
+      <p class="small">Accounts and progress are saved only in this browser.</p>
+    </div>
+  </footer>
+
+  <!-- Toast messages appear here -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

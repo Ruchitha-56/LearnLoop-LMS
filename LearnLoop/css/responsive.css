@@ -1,0 +1,128 @@
+/* =========================================================
+   LearnLoop – responsive adjustments
+   style.css is written for phones first; these rules add
+   layout for tablets (700px+) and desktops (1000px+).
+   ========================================================= */
+
+/* Mobile */
+@media (max-width: 699px) {
+  .container { width: min(1120px, calc(100% - 2rem)); }
+  .section { padding: 3.25rem 0; }
+  .nav { padding: .65rem 0; gap: .5rem; }
+  .nav .logo { font-size: 1.15rem; }
+  .nav-actions { gap: .35rem; }
+  .icon-btn { width: 38px; height: 38px; }
+  .auth-slot .btn-sm { padding: .45rem .75rem; font-size: .85rem; }
+  .auth-slot .avatar { width: 38px; height: 38px; }
+
+  .hero { padding: 3rem 0 3.5rem; }
+  .hero-grid { gap: 2.25rem; }
+  h1 { font-size: clamp(2.1rem, 11vw, 3rem); }
+  .lead { font-size: 1.05rem; }
+  .hero-cta { display: grid; grid-template-columns: 1fr; }
+  .hero-cta .btn { text-align: center; }
+  .section-head { align-items: center; }
+  .course-foot { gap: .75rem; }
+  .categories { display: grid; grid-template-columns: 1fr; }
+  .cat { width: 100%; }
+  .why { gap: 3rem; }
+  .why-visual { min-height: 170px; }
+  .steps { gap: 1rem; margin-top: 1.5rem; }
+  .steps li { margin: 0; padding: 1.35rem; }
+  .steps li h3 { margin-bottom: .45rem; }
+  .cta-band { padding: 2.25rem 1.25rem; }
+  .cta-band .btn { width: 100%; text-align: center; }
+
+  .footer-grid { text-align: center; }
+  .footer-grid nav { justify-content: center; }
+
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .row { grid-template-columns: auto minmax(0, 1fr); }
+  .row > :last-child { grid-column: 1 / -1; }
+  .quiz-top { flex-wrap: wrap; }
+  .quiz-card { padding: 1.35rem; }
+  .detail-img { width: 120px; }
+  .contact-form, .auth-card, .info-card, .gate { padding: 1.35rem; }
+  .auth-slot #logout-btn { display: none; }
+}
+
+@media (max-width: 420px) {
+  .nav .logo svg { width: 24px; height: 24px; }
+  .nav .logo { font-size: 1.05rem; }
+  .auth-slot .btn-sm { padding-inline: .55rem; }
+  .course-body { padding: 1.2rem; }
+  .course-foot { align-items: flex-start; }
+  .detail-cover { width: 120px; height: 120px; }
+  .week { gap: .25rem; }
+}
+
+/* Tablet */
+@media (min-width: 700px) {
+  .featured-grid { grid-template-columns: 1fr 1fr; }
+  .course-big { grid-column: 1 / -1; flex-direction: row; }
+  .course-big .course-art { flex: 0 0 38%; min-height: 100%; }
+  .why-row { grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .why-row.reverse > :first-child { order: 2; }       /* flips text and visual */
+  .steps { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+  .steps li:nth-child(n) { margin: 0; }
+  .cta-band { flex-direction: row; align-items: center; justify-content: space-between; }
+  .footer-grid { grid-template-columns: 1.2fr 1fr 1.2fr; align-items: start; }
+}
+
+/* Desktop: full navigation bar and side-by-side hero */
+@media (min-width: 1000px) {
+  .menu-btn { display: none; }
+  .nav-links, .nav-links.open { display: flex; flex-direction: row; position: static; padding: 0; background: none; box-shadow: none; gap: .3rem; }
+  .hero { padding: 6rem 0 7rem; }
+  .featured-grid { grid-template-columns: 1.6fr 1fr; grid-template-rows: auto auto; }
+  .course-big { grid-row: 1 / 3; grid-column: 1; flex-direction: column; }
+  .course-big .course-art { min-height: 260px; flex: none; }
+  .course-sm.offset { margin-left: 0; }
+}
+
+/* Courses page grid */
+@media (min-width: 700px) {
+  .filter-inner { grid-template-columns: 280px 1fr; align-items: center; }
+  .courses-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1000px) {
+  .courses-grid { grid-template-columns: repeat(3, 1fr); }
+  .courses-grid .course:nth-child(3n+2) { margin-top: 0; }
+}
+
+/* Course details page */
+@media (min-width: 700px) {
+  .detail-head { grid-template-columns: auto 1fr; gap: 2rem; }
+  .terms { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1000px) {
+  .detail-layout { grid-template-columns: 1fr 340px; gap: 3.5rem; }
+  .side-card { position: sticky; top: 100px; }       /* stays visible while scrolling */
+}
+
+/* About, contact and dashboard */
+@media (min-width: 700px) {
+  .about-intro { grid-template-columns: 1.4fr 1fr; gap: 4rem; }
+  .mv-grid { grid-template-columns: 1.3fr 1fr; align-items: start; }
+  .mv-vision { margin-top: 2.5rem; }
+  .philosophy { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .contact-grid { grid-template-columns: 1.4fr 1fr; gap: 2.5rem; }
+  .stats { grid-template-columns: repeat(4, 1fr); }
+  .dash-grid { grid-template-columns: 1fr 1fr; }
+  .enrolled-list, .completed { grid-column: 1 / -1; }
+}
+@media (min-width: 1000px) {
+  .dash-grid { grid-template-columns: 1.3fr 1fr; }
+  .enrolled-list { grid-column: 1; grid-row: 2 / 4; }
+  .completed { grid-column: 2; grid-row: 2 / 4; }
+}
+
+/* Show the learner's first name in the top bar on larger screens */
+@media (min-width: 700px) { .user-chip { display: inline-block; } }
+
+/* Login and sign-up */
+@media (min-width: 600px) { .signup-link { display: inline-block; } }
+@media (min-width: 800px) { .auth-grid { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+
+/* Profile page */
+@media (min-width: 800px) { .profile-grid { grid-template-columns: 360px 1fr; gap: 2rem; align-items: start; } }

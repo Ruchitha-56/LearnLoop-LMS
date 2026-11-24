@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <title>About Us – LearnLoop</title>
+  <meta name="description" content="Learn about LearnLoop, our mission, vision and learning philosophy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header glass">
+    <nav class="nav container" aria-label="Main">
+      <a class="logo" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11" fill="none" stroke="url(#lg)" stroke-width="5" stroke-linecap="round" stroke-dasharray="52 17"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2458A6"/><stop offset="1" stop-color="#6F9DCA"/></linearGradient></defs></svg>
+        LearnLoop
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="dashboard.html">My Learning</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="auth-slot" id="auth-slot"></div>
+        <button class="icon-btn" id="theme-toggle" aria-label="Switch to dark mode">🌙</button>
+        <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="aurora" aria-hidden="true"><span></span><span></span></div>
+      <div class="container">
+        <h1>Learning works best as a loop</h1>
+        <p class="lead">LearnLoop is a small, friendly place to learn new skills at your own pace. No sign-up, no pressure, just steady progress.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container about-intro">
+        <div>
+          <h2>Who we are</h2>
+          <p>LearnLoop began with a simple idea: people finish what they can see themselves making progress on. So every course is split into short lessons, every lesson can be ticked off, and every course ends with a quiz that tells you what stuck.</p>
+          <p>The site is built for beginners, curious people and anyone returning to learning after a break.</p>
+        </div>
+        <img class="about-art" src="assets/images/about-learning.svg" alt="A loop connecting Learn, Grow and Achieve" width="500" height="420">
+      </div>
+    </section>
+
+    <section class="section section-tint">
+      <div class="container mv-grid">
+        <article class="card mv mv-mission">
+          <h2>Our mission</h2>
+          <p>To make learning feel doable: clear lessons, honest feedback and visible progress for everyone.</p>
+        </article>
+        <article class="card mv mv-vision">
+          <h2>Our vision</h2>
+          <p>A world where anyone can pick up a new skill in their spare minutes and see it grow into something they are proud of.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Our learning philosophy</h2>
+        <div class="philosophy">
+          <article><h3>Small pieces beat big leaps</h3><p>Ten-minute lessons are easy to start and easy to repeat. Consistency matters more than long sessions.</p></article>
+          <article><h3>Check, then correct</h3><p>Quizzes are not a test of you. They show which ideas need another look, and explain every answer.</p></article>
+          <article><h3>Close the loop, open the next</h3><p>Finishing a lesson should make the next one feel natural, so progress carries you forward.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint">
+      <div class="container why-choose">
+        <h2>Why choose LearnLoop</h2>
+        <ul class="learn-list">
+          <li>Free to explore. Create an account to enroll and track progress.</li>
+          <li>Your progress is saved privately on your own device.</li>
+          <li>Short lessons with plain, friendly explanations.</li>
+          <li>Quizzes that explain why each answer is right or wrong.</li>
+          <li>Works on phones, tablets and computers.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cta-band">
+        <h2>Ready to start your first loop?</h2>
+        <a class="btn btn-light" href="courses.html">Explore courses</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="logo" href="index.html">LearnLoop</a><p>Learn. Grow. Achieve.</p></div>
+      <nav aria-label="Footer"><a href="courses.html">Courses</a><a href="about.html">About</a><a href="dashboard.html">My Learning</a><a href="contact.html">Contact</a></nav>
+      <p class="small">Accounts and progress are saved only in this browser.</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
